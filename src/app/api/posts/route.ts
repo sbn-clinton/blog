@@ -1,8 +1,8 @@
 import prisma from "@/lib/db"
 import { getServerSession } from "next-auth/next"
 import { NextResponse } from "next/server"
-import { authOptions } from "../auth/[...nextauth]/route"
 import { redirect } from "next/navigation"
+import { authOptions } from "@/lib/options"
 
 
 export const GET = async () => {
