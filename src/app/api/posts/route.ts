@@ -1,8 +1,7 @@
 import prisma from "@/lib/db"
-import { getServerSession } from "next-auth/next"
 import { NextResponse } from "next/server"
 import { redirect } from "next/navigation"
-import { authOptions } from "@/lib/options"
+import { auth } from "@/auth"
 
 
 export const GET = async () => {
@@ -32,7 +31,7 @@ export const GET = async () => {
 }
 
 export const POST = async (req: Request) => {
-  const session = await getServerSession( authOptions)
+  const session = await auth()
   const authorEmail = session?.user?.email
   if (!authorEmail) {
     redirect("sign-in")

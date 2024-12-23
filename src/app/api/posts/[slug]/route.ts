@@ -1,8 +1,7 @@
 import prisma from "@/lib/db"
-import { getServerSession } from "next-auth/next"
 import { NextResponse } from "next/server"
 import { redirect } from "next/navigation"
-import { authOptions } from "@/lib/options"
+import { auth } from "@/auth"
 
 
 
@@ -49,7 +48,7 @@ export const DELETE = async (req : Request, { params }: { params: { slug: string
 export const PUT = async (req: Request, { params }: { params: { slug: string } }) => {
   const slug = params.slug
 
-  const session = await getServerSession( authOptions)
+  const session = await auth()
   const authorEmail = session?.user?.email
   if (!authorEmail) {
     redirect("sign-in")
