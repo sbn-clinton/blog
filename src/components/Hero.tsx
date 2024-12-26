@@ -36,13 +36,13 @@ const Hero = ({ heroPost }: { heroPost: getPost[] }) => {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>
             <div className="absolute bottom-5 left-5 z-10 text-left text-white">
-              <h1 className="text-3xl md:text-5xl font-bold mb-4">
+              <h1 className="text-xl md:text-5xl font-bold mb-2 md:mb-4">
                 {post.title}
               </h1>
-              <p className="text-sm md:text-lg mb-6">
+              <p className="text-xs md:text-lg mb-3 md:mb-6">
                 {post.content.slice(0, 100)}...
               </p>
-              <div className="text-sm md:text-base font-light mb-6">
+              <div className="text-xs md:text-base font-light mb-6">
                 <p>
                   <span className="font-semibold">Author:</span>{" "}
                   {post.authorEmail}
@@ -61,7 +61,7 @@ const Hero = ({ heroPost }: { heroPost: getPost[] }) => {
                 </p>
               </div>
               <Link href={`/single-post/${post.slug}`}>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-md">
+                <button className="btn btn-sm md:btn-md btn-info">
                   Read More
                 </button>
               </Link>

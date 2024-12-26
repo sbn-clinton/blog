@@ -38,8 +38,8 @@ const DashboardPage = () => {
   }, [authorEmail]);
 
   return (
-    <div className=" flex flex-col gap-5 md:gap-10 max-w-5xl md:mx-auto px-5">
-      <h1 className="font-bold text-xl text-center">My Post</h1>
+    <div className=" flex flex-col gap-5 md:gap-10 md:max-w-5xl md:mx-auto font-sans px-5">
+      <h1 className="font-bold text-lg md:text-xl text-center">My Post</h1>
       <div className="flex flex-col gap-4 md:gap-6">
         {loading && <span className="loading-spinner loading-md"></span>}
         {posts.map((post) => (

@@ -5,9 +5,9 @@ import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded p-10 shadow-lg">
+    <footer className="footer footer-center gap-4 md:gap-8 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded p-8 md:p-10 shadow-lg">
       {/* Navigation Links */}
-      <nav className="grid grid-flow-col gap-6 text-sm font-medium">
+      <nav className="grid grid-flow-col gap-3 md:gap-6 text-xs md:text-sm font-medium">
         <Link href="/about" className="hover:underline hover:text-blue-600">
           About us
         </Link>
@@ -24,8 +24,8 @@ const Footer = () => {
       </nav>
 
       {/* Social Media Links */}
-      <nav className="mt-4">
-        <div className="flex justify-center gap-6 text-xl">
+      <nav className="mt-2 md:mt-4">
+        <div className="flex justify-center gap-3 md:gap-6 text-xl">
           <Link
             href="https://twitter.com"
             target="_blank"
@@ -54,10 +54,10 @@ const Footer = () => {
       </nav>
 
       {/* Copyright Section */}
-      <aside className="mt-6 text-sm">
+      <aside className="mt-2 md:mt-4 text-xs md:text-sm ">
         <p>
-          Copyright © {new Date().getFullYear()} - All rights reserved by
-          SBN_web_dev
+          Copyright © {new Date().getFullYear()} - All rights reserved by{" "}
+          <span className="font-bold text-sky-400">SBN_web_dev</span>
         </p>
       </aside>
     </footer>

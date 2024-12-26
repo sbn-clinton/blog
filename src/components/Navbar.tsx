@@ -10,14 +10,14 @@ import { Globe } from "lucide-react";
 const Navbar = () => {
   const { status } = useSession();
   return (
-    <div className="fixed top-0 right-0 left-0 backdrop-blur-lg bg-opacity-20 bg-slate-300 z-50">
+    <div className="fixed top-0 right-0 left-0 backdrop-blur-lg bg-opacity-20 bg-slate-300 z-50 font-sans">
       <nav className="flex items-center justify-between max-w-6xl mx-auto p-4 md:p-6 ">
         <div className="flex items-center justify-center">
           <Link
-            className="font-bold text-lg font-sans flex items-center justify-center"
+            className="font-bold md:text-lg font-sans flex items-center justify-center"
             href={"/"}
           >
-            <Globe className="w-5 h-5 text-blue-400 md:w-6 md:h-6 inline-block mr-1" />
+            <Globe className="w-5 h-5 text-blue-400 md:w-7 md:h-7 inline-block mr-1" />
             SBN Blog
           </Link>
         </div>

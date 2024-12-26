@@ -1,7 +1,9 @@
 "use client";
 
 import axios from "axios";
+import { Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 interface IDelete {
   slug: string;
@@ -9,6 +11,7 @@ interface IDelete {
 
 const DeleteButton: React.FC<IDelete> = ({ slug }) => {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
 
   const deleteImage = async (publicId: string) => {
     try {
@@ -27,6 +30,8 @@ const DeleteButton: React.FC<IDelete> = ({ slug }) => {
 
   const handleDelete = async (slug: string) => {
     try {
+      setIsLoading(true);
+
       const response = await axios.delete(`/api/posts/${slug}`);
       if (response.status === 200) {
         const { publicId } = response.data;
@@ -39,15 +44,19 @@ const DeleteButton: React.FC<IDelete> = ({ slug }) => {
       }
     } catch (error) {
       console.error("Error deleting post:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
-    <div
+    <button
       onClick={() => handleDelete(slug)}
-      className="font-bold btn btn-error text-sm md:text-base"
+      disabled={isLoading}
+      className="font-bold btn btn-sm md:btn-md btn-error text-sm md:text-base"
     >
+      <Trash className="w-3 h-3 md:w-5 md:h-5 mr-1" />
       Delete
-    </div>
+    </button>
   );
 };
 

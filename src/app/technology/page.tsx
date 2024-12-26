@@ -28,7 +28,7 @@ const TechnologyPage = async () => {
   const heroPost = await getCatPosts("Technology");
   return (
     <div className=" flex flex-col gap-5 md:gap-10 max-w-5xl md:mx-auto px-5">
-      <h1 className="font-bold text-xl text-center">Technology Post</h1>
+      <h1 className="font-bold md:text-xl text-center">Technology Post</h1>
       <HeroPage heroPost={heroPost} />
       <div className="flex flex-col gap-4 md:gap-7">
         {posts ? (

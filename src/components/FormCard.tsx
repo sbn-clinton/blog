@@ -150,14 +150,14 @@ const FormCard: FC<formCardProps> = ({
         onChange={(e) => setTitle(e.target.value)}
         type="text"
         placeholder="Title"
-        className="input input-bordered w-full text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+        className="input input-sm md:input-md input-bordered w-full text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
       />
 
       {/* Textarea for Bio */}
       <textarea
         value={content}
         onChange={(e) => setContent(e.target.value)}
-        className="textarea textarea-bordered w-full text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+        className="textarea textarea-sm md:textarea-md textarea-bordered w-full text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
         placeholder="Content"
       ></textarea>
 
@@ -165,7 +165,7 @@ const FormCard: FC<formCardProps> = ({
       <select
         value={category}
         onChange={(e) => setCategory(e.target.value)}
-        className="select select-bordered w-full text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+        className="select select-sm md:select-md select-bordered w-full text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
       >
         {catLoading && <option>Loading...</option>}
         <option defaultValue={""}>Select Category</option>
@@ -207,7 +207,7 @@ const FormCard: FC<formCardProps> = ({
           onChange={(e) => setLinkValue(e.target.value)}
           type="text"
           placeholder="Add Link"
-          className="input input-bordered flex-1 text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+          className="input input-sm md:input-md input-bordered flex-1 text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
         />
         <button
           onClick={LinkSubmit}

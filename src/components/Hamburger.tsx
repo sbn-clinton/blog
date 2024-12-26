@@ -27,7 +27,7 @@ export function Hamburger() {
     <Sheet open={open} onOpenChange={setOpen}>
       {/* Hamburger Menu Trigger */}
       <SheetTrigger asChild>
-        <HamburgerMenuIcon className="w-6 h-6 cursor-pointer hover:text-blue-500 transition" />
+        <HamburgerMenuIcon className="w-5 h-5 cursor-pointer hover:text-blue-500 transition" />
       </SheetTrigger>
 
       {/* Sidebar Content */}
@@ -40,7 +40,7 @@ export function Hamburger() {
                 key={category}
                 href={`/${category.toLowerCase()}`}
                 onClick={closeDropdown}
-                className="block p-2 rounded-md text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+                className="block p-2 rounded-md text-xs font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition"
               >
                 {category}
               </Link>

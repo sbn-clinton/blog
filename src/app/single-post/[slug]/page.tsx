@@ -48,7 +48,7 @@ const SinglePostPage = ({ params }: { params: { slug: string } }) => {
   });
 
   return (
-    <div className="space-y-10  py-10 max-w-6xl md:mx-auto px-3">
+    <div className="space-y-10  py-10 md:max-w-6xl md:mx-auto px-4 font-sans">
       <BackButton />
       {loading ? (
         <div className="flex justify-center items-center">
@@ -57,7 +57,7 @@ const SinglePostPage = ({ params }: { params: { slug: string } }) => {
       ) : (
         <div className="flex flex-col md:mx-10  md:flex-row gap-2 md:gap-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
           {/* Image Section */}
-          <div className="w-full md:w-2/5">
+          <div className=" md:w-2/5">
             <Image
               src={imageUrl || "/assets/thumbnail.jpg"}
               alt="Post Image"
@@ -68,25 +68,25 @@ const SinglePostPage = ({ params }: { params: { slug: string } }) => {
           </div>
 
           {/* Content Section */}
-          <div className="flex flex-col gap-4 p-2 md:w-3/5">
+          <div className="flex flex-col gap-2 md:gap-4 p-2 md:w-3/5">
             {/* Post Title */}
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
               {title}
             </h1>
 
             {/* Post Content */}
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-gray-700 text-xs md:text-base dark:text-gray-300 leading-relaxed">
               {content}
             </p>
 
             {/* Links Section */}
             {links.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-4">
+              <div className="flex flex-wrap gap-2 mt-2 md:mt-4">
                 {links.map((link, index) => (
                   <Link
                     key={index}
                     href={link}
-                    className="px-3 py-1 text-sm font-medium text-blue-600 bg-blue-100 hover:bg-blue-200 dark:text-blue-400 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition"
+                    className="px-2 md:px-3 py-1 text-xs md:text-sm font-medium text-blue-600 bg-blue-100 hover:bg-blue-200 dark:text-blue-400 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition"
                   >
                     {link}
                   </Link>
@@ -95,20 +95,20 @@ const SinglePostPage = ({ params }: { params: { slug: string } }) => {
             )}
 
             {/* Post Metadata */}
-            <div className="mt-4 space-y-2">
-              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+            <div className=" mt-2 md:mt-4 space-y-2">
+              <p className="text-xs md:text-sm font-medium text-gray-600 dark:text-gray-400">
                 <span className="font-semibold text-gray-900 dark:text-gray-100">
                   Category:
                 </span>{" "}
                 {catName}
               </p>
-              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+              <p className="text-xs md:text-sm font-medium text-gray-600 dark:text-gray-400">
                 <span className="font-semibold text-gray-900 dark:text-gray-100">
                   Author:
                 </span>{" "}
                 {authorEmail.slice(0, 26)}
               </p>
-              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+              <p className="text-xs md:text-sm font-medium text-gray-600 dark:text-gray-400">
                 <span className="font-semibold text-gray-900 dark:text-gray-100">
                   Posted on:
                 </span>{" "}

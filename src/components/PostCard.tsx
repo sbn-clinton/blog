@@ -45,7 +45,7 @@ const PostCard = ({
       className=""
     >
       <Link href={`/single-post/${slug}`} className="group">
-        <div className="flex flex-col md:flex-row gap-5 p-4 rounded-lg border shadow-md transition-transform duration-300 hover:shadow-lg hover:scale-105 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white">
+        <div className="flex flex-col md:flex-row gap-5 p-4 rounded-lg border shadow-md transition-transform duration-300 hover:shadow-lg hover:scale-105 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 bg-white font-sans">
           {/* Image Section */}
           <div className="relative w-full md:w-2/5 h-56 md:h-64 rounded-lg overflow-hidden">
             <Image
@@ -64,31 +64,31 @@ const PostCard = ({
             </h2>
 
             {/* Content Preview */}
-            <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4">
+            <p className="text-xs md:text-base text-gray-600 dark:text-gray-300 mb-2 md:mb-4">
               {content.slice(0, 100)}...
             </p>
 
             {/* Additional Info */}
-            <div className="text-sm md:text-base flex flex-col gap-2 text-gray-700 dark:text-gray-400">
-              <p>
+            <div className="text-xs md:text-base flex flex-col gap-2 text-gray-700 dark:text-gray-400">
+              <p className="font-light">
                 <span className="font-semibold">Author:</span> {authorEmail}
               </p>
-              <p>
+              <p className="font-light">
                 <span className="font-semibold">Category:</span> {catName}
               </p>
-              <p>
+              <p className="font-light">
                 <span className="font-semibold">Posted on:</span> {date}
               </p>
             </div>
 
             {/* Links */}
             {links.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-4">
+              <div className="flex flex-wrap gap-2 mt-2 md:mt-4">
                 {links.map((link, index) => (
                   <Link
                     key={index}
                     href={link}
-                    className="text-blue-500 hover:underline text-sm"
+                    className="text-blue-500 hover:underline text-xs md:text-sm"
                   >
                     {link}
                   </Link>

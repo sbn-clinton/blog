@@ -85,7 +85,7 @@ const EditPostPage = ({ params }: { params: { slug: string } }) => {
     }
   };
   return (
-    <div className="space-y-5 max-w-3xl mx-auto px-5">
+    <div className="space-y-3 md:space-y-5 md:max-w-3xl md:mx-auto font-sans px-5">
       <BackButton />
       <h1 className="font-bold text-xl text-center">Edit Post</h1>
       <FormCard

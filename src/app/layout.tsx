@@ -41,7 +41,7 @@ export default function RootLayout({
           <Provider>
             <div className="flex flex-col min-h-screen gap-10 ">
               <Navbar />
-              <main className=" flex-grow mt-24 md:mt-32 ">{children}</main>
+              <div className=" flex-grow mt-24 md:mt-32 ">{children}</div>
               <Footer />
             </div>
           </Provider>

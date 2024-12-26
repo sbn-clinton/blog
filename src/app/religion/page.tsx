@@ -27,7 +27,7 @@ const ReligionPage = async () => {
 
   const heroPost = await getCatPosts("Religion");
   return (
-    <div className=" flex flex-col gap-5 md:gap-10 max-w-5xl md:mx-auto px-5">
+    <div className=" flex flex-col gap-5 md:gap-10 md:max-w-5xl md:mx-auto px-5 font-sans">
       <h1 className="font-bold text-xl text-center">Religion Post</h1>
       <HeroPage heroPost={heroPost} />
       <div className="flex flex-col gap-4 md:gap-7">
